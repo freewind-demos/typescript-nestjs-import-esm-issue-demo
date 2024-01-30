@@ -1,13 +1,11 @@
-Typescript NestJS Demo
+Typescript NestJS Import ESM Issue Demo
 ======================
 
-Say hello
+如果引用的某个库(`get-port`)是以esm格式发布的，则nestjs当前无法访问它。目前最好做法是避开这样的库，如果一定要用，就得另外用个bundler来处理。
 
-`nest-cli.json`是用来每次启动时，自动删除dist，否则还会用旧文件。
+https://stackoverflow.com/questions/74830166/unable-to-import-esm-module-in-nestjs
 
 ```
 npm i
 npm start
 ```
-
-Then open http://localhost:3000
